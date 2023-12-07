@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>To Do Page</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+
+<body>
+    <header>
+        <h1>Hey  ☺️  {{ request.user.username }} Welcome in TO DO App</h1>
+        <section id="best-sellers">
+        
+        <nav>
+            <ul>
+                <li><a href="/ " class="button-64">Home</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="/" class="button-64">About</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="{% url 'logout' %}" class="button-64">Logout</a></li>               
+            </ul>
+        </nav>
+    </section>
+    </header>
+   
+
+    
+    <div >
+        <h1></h1>
+        
+    </div>
+    <div id="app">
+        
+    
+    <p> ☺️  {{ request.user.username }} .. Insert a new task here</p>
+    <div id="message-container">
+        {% if msg %}
+            <p>{{ msg }}</p>
+        {% endif %}
+    </div>
+    <form action="add-todo" method="POST">
+        {% csrf_token %}
+        <input type="text" name="no" id="Uname" placeholder="Enter Task No... ">
+        <br><br>
+        <input type="text" name="date" id="Uname" placeholder="Enter Date- ../../.. ">
+        
+        <br><br>
+        <input type="text" placeholder="New task Here . . . . . . ." name="task">
+        <button class='btn_add' value='ADD'>Add</button>
+</form>
+    </div>
+    <br><br>
+
+
+    
+
+    <div>
+        <div id="OneDiv">
+            <div id="h2">
+            <h2 id="h2"> {{ request.user.username }} ☺️ All your Tasks are here</h2>
+            </div>
+            
+         
+            <table>
+                <thead>
+                    <th>No.</th>
+                    <th>Date</th>
+                    <th>Task</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </thead>
+                
+                {% for d in data %}
+                    <tr>
+                        <td>{{d.no}}</td>
+                        <td>{{d.date}}</td>
+                        <td>{{d.task}}</td>
+                        <td>
+                            <a href="/edit-no/{{d.no}}" title="Edit" >✎ </a> 
+                        </td>
+                        <td>
+                            <a href="/delete-no/{{d.no}}" title="Delete">🗑️ </a> 
+                              
+                        </td>    
+                    </tr>    
+                {% endfor %}    
+            </table> 
+            
+        </div>
+    </div>
+
+
+
+    <script>
+        // Show the message container
+        document.addEventListener('DOMContentLoaded', function() {
+            var messageContainer = document.getElementById('message-container');
+            messageContainer.style.display = 'block';
+
+            // Hide the message container after 2 seconds
+            setTimeout(function() {
+                messageContainer.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+    </body>
+
+    </html>

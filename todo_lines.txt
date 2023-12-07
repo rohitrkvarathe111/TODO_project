@@ -1,0 +1,100 @@
+                <tr>
+                    <td>
+                        <label for="filter_no">Filter by No:</label>
+                        <input type="text" name="filter_no" id="filter_no" placeholder="Enter No..." value="{{ request.GET.filter_no }}">
+                    </td>
+                    <td>
+                        <label for="filter_date">Filter by Date:</label>
+                        <input type="text" name="filter_date" id="filter_date" placeholder="Enter Date..." value="{{ request.GET.filter_date }}">
+                    </td>
+                    <td>
+                        <label for="filter_task">Filter by Task:</label>
+                        <input type="text" name="filter_task" id="filter_task" placeholder="Enter Task..." value="{{ request.GET.filter_task }}">
+                    </td>
+                    <td>
+                        <button type="submit">Filter</button>
+                    </td>
+                </tr>
+
+
+
+
+@login_required(login_url='login')
+def delete(request, no):
+    try:
+        
+        task_to_delete = Entry.objects.get(no=no, user=request.user)
+        task_to_delete.delete()
+        
+        messages.success(request, 'The task has been deleted successfully!')
+        return HttpResponseRedirect(reverse('mainpage'))
+    except Entry.DoesNotExist:
+        return HttpResponse("Task not found.") 
+
+todoadd
+        Entry.objects.create(user=user, no=no, date=date, task=task)
+
+            msg = "Task saved"
+            
+            return render (request, 'mainpage.html',{'msg':msg,'data': data })
+        else:
+            return HttpResponse("not found")
+
+<div class="login">
+<form id="login" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div id="message-container">
+            {% if msg %}
+                <p>{{ msg }}</p>
+            {% endif %}
+        </div>
+        <h2>Login Here</h2>
+        <br><br>
+        <label><b>User Name
+        </b>
+        </label>
+        <input type="text" name="username" id="Uname" placeholder="Enter Username">
+        <br><br>
+        <label><b>Password
+        </b>
+        </label>
+        <input type="Password" name="pass" id="Pass1" placeholder="Password">
+        <br><br>
+        <input type="checkbox" id="check">
+        <span>Remember me</span>
+        <br><br>
+        <button class="button-64" role="button"><span class="text">Log In</span></button>
+        <br><br>
+        <div class="signup">
+            <span class="signup">Don't have an account?
+             <label for="check"><a href="signup">Signup Here</a></label>
+            </span>
+          </div>
+          
+    </form>
+
+</div>
+
+===============================================================================================
+def RecordEdited(request):
+    if request.method == 'POST':
+        ID = request.POST['id']
+        data1 = request.POST['data1']
+        data2 = request.POST['data2']
+        Entry.objects.filter(ID=ID).update(data1=data1,data2=data2)
+        return HttpResponseRedirect("show")
+    else:
+        return HttpResponse("<h1>404 - Not Found</h1>")
+
+
+
+
+
+
+
+
+
+
+
+
+

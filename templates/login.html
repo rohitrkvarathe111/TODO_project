@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <h1>TO DO APP</h1>
+    
+
+    <div class="login">
+        
+    <form id="login" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div id="message-container">
+            {% if msg %}
+                <p>{{ msg }}</p>
+            {% endif %}
+        </div>
+        <h2>Login Here</h2>
+        <br><br>
+        <label><b>User Name
+        </b>
+        </label>
+        <input type="text" name="username" id="Uname" placeholder="Enter Username">
+        <br><br>
+        <label><b>Password
+        </b>
+        </label>
+        <input type="Password" name="pass" id="Pass1" placeholder="Password">
+        <br><br>
+        <input type="checkbox" id="check">
+        <span>Remember me</span>
+        <br><br>
+        <button class="button-64" role="button"><span class="text">Log In</span></button>
+        <br><br>
+        <div class="signup">
+            <span class="signup">Don't have an account?
+             <label for="check"><a href="signup">Signup Here</a></label>
+            </span>
+          </div>
+          
+    </form>
+</div>
+<script>
+    // Show the message container
+    document.addEventListener('DOMContentLoaded', function() {
+        var messageContainer = document.getElementById('message-container');
+        messageContainer.style.display = 'block';
+
+        // Hide the message container after 2 seconds
+        setTimeout(function() {
+            messageContainer.style.display = 'none';
+        }, 2000);
+    });
+</script>
+</body>
+</html>

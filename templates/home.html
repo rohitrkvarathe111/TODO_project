@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <link href="../static/home2.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="https://th.bing.com/th?id=OIP.aWO8tAGH060wkqGX_UrLFwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">COMPANY A</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="twitter" title="Company Twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook" title="Company facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram" title="Company instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus" title="Company Email"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin" title="Company linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'logout' %}" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Logout</span></a></li>
+          {% else %}
+          <li><a href="{% url 'login' %}" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Login Here</span></a></li>
+          <li><a href="signup" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Signup Here</span></a></li>
+          {% endif %}
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Use our TO Do App </h1>
+      <p>and <span class="typed" data-typed-items="Increased Productivity, Effective Time Management, Goal Tracking and Achievement"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About Our To-Do List Project</h2>
+          <header>
+            <h4>Welcome to Our Productivity Hub!</h4>
+        </header>
+    
+        <main>
+            <p>At [Your Project Name], we believe in the power of organization and efficiency to transform the way you approach your daily tasks. Our To-Do List Project is more than just a tool; it's a companion on your journey towards enhanced productivity and accomplishment.
+            
+              Our Mission
+              Empowering Productivity: We strive to empower individuals to take control of their time and boost productivity by providing a simple yet powerful task management solution.
+              
+              Simplicity Meets Functionality: Our To-Do List Project is designed with a user-friendly interface, ensuring that managing your tasks is not only efficient but also a seamless and enjoyable experience.</p>
+            
+        </main>
+        <header>
+          <h4>Key Features</h4>
+          </header>
+      
+          <main>
+              <p>Intuitive Task Management: Easily add, edit, and prioritize tasks with a few clicks.</p>
+              <p>Customizable Categories: Organize your tasks by categories to streamline your workflow.</p>
+              <p>Deadline Reminders: Stay on top of your schedule with timely reminders for upcoming deadlines.</p>
+              <p>Cross-Platform Accessibility: Access your to-do list anytime, anywhere, whether on desktop or mobile.</p>
+              
+          </main>
+          <header>
+            <h4>The Team Behind the Project</h4>
+        </header>
+
+        <main>
+            <p>[Your Project Name] was brought to life by a passionate team of developers and designers committed to creating tools that make a positive impact on people's lives. We understand the challenges of modern-day multitasking and aim to simplify your journey towards success.</p>
+            
+        </main>
+        <header>
+          <h4>The Team Behind the Project</h4>
+      </header>
+  
+        <main>
+            <p>[Your Project Name] was brought to life by a passionate team of developers and designers committed to creating tools that make a positive impact on people's lives. We understand the challenges of modern-day multitasking and aim to simplify your journey towards success.</p>
+            
+        </main>
+        <header>
+          <h4>Get Started Today!</h4>
+      </header>
+  
+      <main>
+          <p>Join the growing community of individuals who have transformed their lives through effective task management. Whether you're a student, professional, or anyone with a busy schedule, our To-Do List Project is here to support your goals.</p>
+          
+      </main>
+          
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>Having 232 happy clients suggests that your project or to-do list involves catering to the needs and satisfaction of a substantial number of clients.</p>
+          <p>The fact that you have dedicated 1453 hours of support indicates a commitment to assisting clients and ensuring the success of the projects. This level of support suggests a customer-centric approach, where you are actively involved in addressing queries, providing guidance, and ensuring a smooth project execution. </p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="5000" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong>  </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>project user</strong> </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1589" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Support</strong> by support team</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hard Workers</strong> </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Dashboard</h2>
+          <p> Developing a dashboard for a to-do list project involves creating a visually intuitive interface with graphical elements like progress bars and charts. Users can efficiently manage tasks, track project timelines, and collaborate with team members, ensuring a streamlined and visually informative task management experience. The dashboard prioritizes clarity, user-friendly navigation, and real-time insights. </p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">Priority Levels: <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Assigned Team Members: <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Project Phases: <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">Client or Stakeholder:<i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Recurring Tasks: <i class="val">65%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Possitive Feedback or Review Stage: <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    {% if not user.is_authenticated %}
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Signup page Url Here</h2>
+          <p>""Unlock a world of possibilities! Join our community today by heading to the signup page. It's a simple step towards accessing exclusive features, personalized experiences, and staying connected with what matters most. Your journey begins with a click – sign up now and embark on a seamless and rewarding experience!"</p>
+        </div>
+        <br><br>
+        
+        <form>
+          <h3>Use our TODO list app now from here</h3>
+          <div class="signup">
+            <span class="signup">Don't have an account?
+             <label for="check"><a href="signup">Signup Here</a></label>
+            </span>
+          </div>
+        </form>
+        
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Sumary</h3>
+            
+            
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+    {% endif %}
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Project</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>   </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-bar-chart"></i></div>
+            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-binoculars"></i></div>
+            <h4 class="title"><a href="">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bi bi-brightness-high"></i></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="../assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="../assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="../assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="../assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="../assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>                       </p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Pune</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>comp@outlook.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 987654321</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed/v1/place?q=WV8V+8FF+Betul,+Madhya+Pradesh,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" frameborder="1" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+      
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+  
+
+
+
+
+
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        TO DO APP <strong><span></span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Persistence Fuels Achievement Always<a href="">  </a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../static/vendor/typed.js/typed.umd.js"></script>
+  <script src="../static/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>

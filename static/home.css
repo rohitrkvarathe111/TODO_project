@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+* {
+margin: 0;
+padding: 0;
+outline: 0;
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
+user-select: none;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+/* Default styles for larger screens */
+header {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* Styles for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+  nav li {
+      display: block;
+      margin-bottom: 10px;
+  }
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    font-family: 'Arial';
+    min-height: 120vh;
+}
+#best-sellers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+#app {
+width: 50%;
+min-width: 600px;
+}
+h1 {
+font-family: "Dancing Script", cursive;
+text-align: center;
+margin-bottom: 50px;
+font-size: 45px;
+color: #162223;
+font-weight: 700;
+}
+#h2 {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 45px;
+  color: #191e1f;
+  font-weight: 700;
+  }
+p {
+font-family: "Dancing Script", cursive;
+text-align: center;
+margin-top: 30px;
+font-size: 30px;
+color: #1c3333;
+font-weight: 300;
+}
+ul {
+font-family: "Lato", sans-serif;
+font-size: 20px;
+font-weight: 400;
+font-style: italic;
+margin: 50px;
+}
+ul li {
+margin-bottom: 10px;
+color: #5c5c5c;
+}
+ul li a {
+margin-left: 15px;
+color: white;
+cursor: pointer;
+border: 1px solid #7cbe7b;
+border-radius: 5px;
+padding: 0 15px 2px 15px;
+background-color: #7cbe7b;
+}
+ul li a:hover {
+opacity: 0.8;
+}
+input,
+button {
+font: 400 20px "Lato", sans-serif;
+}
+input {
+width: 60%;
+height: 40px;
+color: #5c5c5c;
+border: 1px solid #dcdce6;
+border-radius: 8px;
+padding: 0 24px;
+margin-right: 10px;
+}
+.btn_add {
+width: 30%;
+height: 40px;
+border: 1px solid #dcdce6;
+border-radius: 8px;
+background-color: #59a2ad;
+color: #fff;
+cursor: pointer;
+}
+.btn_add:hover {
+opacity: 0.9;
+}
+
+
+ 
+
+#head
+
+{
+
+    text-align: center;
+
+    max-width: 80%;
+
+    margin-left: 9%;
+
+    padding: 0.5%;
+
+    background-color: rgb(226, 225, 223);
+
+}
+
+ 
+
+table{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    border-collapse: collapse;
+
+    width: 95%;
+
+    margin: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+ 
+
+td,th{
+
+    border: 2px solid #dddddd;
+
+    text-align: center;
+
+    padding: 8px;
+
+}
+
+ 
+
+tr:nth-child(even){
+
+    background-color: #18c577;
+
+}
+
+
+.button-64 {
+    align-items: center;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 10%;
+    min-width: 150px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .button-64:active,
+  .button-64:hover {
+    outline: 0;
+  }
+
+  .button-64 span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 20%;
+    height: 10%;
+    transition: 300ms;
+  }
+
+  .button-64:hover span {
+    background: none;
+  }
+
+  @media (min-width: 768px) {
+    .button-64 {
+      font-size: 24px;
+      min-width: 196px;
+    }
+  }
+
+  #message-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+}

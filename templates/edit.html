@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'edit.css' %}">
+
+    <title>Edit Page</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="editTodoHeader">Edit todo here</h1>
+    </header>
+    
+<div class="login">
+    
+    <form action="{% url 'edit' no=entry.no %}" method="post">
+        {% csrf_token %}
+        <h2>Edit Here</h2>
+        <br><br>
+        <label><b>Task No.
+        </b>
+        </label>
+        <input required autofocus type="text" name="no" id="Uname" placeholder="Enter No" value="{{ entry.no }}">
+        <br><br>
+        <label><b>Date
+        </b>
+        </label>
+        <input type="text" name="date" id="Uname" placeholder="Enter Date" value="{{ entry.date }}">
+        <br><br>
+        <label><b>Task
+        </b>
+        </label>
+        <input type="text" name="task" id="Uname" placeholder="Enter Task" value="{{ entry.task }}">
+        <br><br>
+        <button class="button-64" role="button"><span class="text">Save Changes</span></button>
+        <br><br>
+    </form>
+        
+          <section>
+            <label>View Your TO DO's Here</label>
+          <a href="{% url 'mainpage' %}" class="button-64" role="button">
+            <span class="text">To Do's</span>
+        </a>
+         </section>
+        
+       
+        </div>
+
+
+        </div>
+        <span>{{msg}}</span>
+         </div>
+
+
+
+
+
+
+    </body>
+
+    </html>
